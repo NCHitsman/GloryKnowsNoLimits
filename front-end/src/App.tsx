@@ -8,7 +8,7 @@ import { useAppDispatch } from './store/index'
 
 function App() {
   const dispatch = useAppDispatch();
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoaded, setIsLoaded] = useState<boolean>(false);
 
   useEffect(() => {
     dispatch(sessionActions.restoreUser()).then(() => setIsLoaded(true));
