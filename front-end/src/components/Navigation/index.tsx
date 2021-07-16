@@ -1,4 +1,3 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import ProfileButton from "./ProfileButton";
@@ -15,7 +14,7 @@ interface Props {
 function Navigation({ isLoaded, sessionUser }: Props) {
   let sessionLinks;
   if (sessionUser) {
-    sessionLinks = <ProfileButton user={sessionUser} />;
+    sessionLinks = <ProfileButton />;
   } else {
     sessionLinks = (
       <div className="LogOutSignUpButtonCont">
@@ -81,7 +80,6 @@ function Navigation({ isLoaded, sessionUser }: Props) {
             About Me
           </NavLink>
         </div>
-        <LoginFormPage />
       </div>
       {isLoaded && sessionLinks}
     </div>
